@@ -7,14 +7,19 @@
 
 html {
 	height: 100%; /* sticky footer */
+	scroll-behavior: smooth;
 }
 
 body {
-	height: 100%; /* sticky footer */
-	display: flex; /* sticky footer */
-	flex-direction: column; /* sticky footer */
+	/* sticky footer */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	/* /sticky footer */
+
 	margin: 0;
 	font-family: sans-serif;
+	background-color: rgb(236, 246, 255);
 	color: #000000;
 }
 
@@ -47,12 +52,6 @@ img {
 	height: auto;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
 fieldset {
 	border: none;
 	margin: 0;
@@ -67,7 +66,6 @@ legend {
 }
 
 /* Grid styles */
-
 .container {
 	width: 1200px;
 	margin: 0 auto;
@@ -76,18 +74,117 @@ legend {
 }
 
 /* Utility */
-
 .none {
 	display: none !important;
 }
 
-/* Sticky Footer */
+/* Text */
+.title-1 {
+	font-size: 42px;
+}
+.title-2 {
+	font-size: 26px;
+}
 
+/* Header */
+.header {
+	padding: 15px 0;
+	background-color: rgb(30, 30, 30);
+}
+.header__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+	width: 80px;
+	height: 80px;
+}
+.header__logo img {
+	object-fit: cover;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+}
+.header__nav-item {
+	display: inline-block;
+
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+.header__nav-item:hover {
+	color: rgba(255, 255, 255, 0.8);
+}
+.header__nav-item:active {
+	color: rgba(255, 255, 255, 0.5);
+}
+.header__nav-item:not(:last-child) {
+	margin-right: 25px;
+}
+
+/* Main */
+.main {
+	padding: 100px 0;
+}
+
+/* Main header */
+.main-header {
+	margin-bottom: 25px;
+}
+.main-header__title {
+	margin-bottom: 15px;	
+}
+
+/* Main content nav */
+.main-content {
+	margin-bottom: 50px;
+}
+.main-content__title {
+	margin-bottom: 15px;
+}
+
+.main-content a {
+	font-size: 18px;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+.main-content a:hover {
+	text-decoration: underline;
+}
+.main-content a:active {
+	font-weight: 600;
+}
+.main-content li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+/* Main History */
+.main-history {
+
+}
+
+.main-history__title {
+	margin-bottom: 25px;
+}
+
+.main-history p:not(:last-child){
+	margin-bottom: 15px;
+}
+
+.main-history img{
+	padding: 15px;
+
+	width: 500px;
+	height: 500px;
+	object-fit: cover;
+
+	float: right;
+}
+
+/* Footer */
 .footer {
-	margin-top: auto; /* sticky footer */
-
-	/* Just for fun */
-	text-align: center;
-	background-color: #e2e2e2;
-	padding: 50px 0;
+	margin-top: auto;
 }
