@@ -1,0 +1,29 @@
+.header {
+	padding: 15px 0;
+	background-color: rgb(30, 30, 30);
+}
+.header__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+}
+.header__nav-item {
+	display: inline-block;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+
+	&:hover {
+		color: rgba(255, 255, 255, 0.8);
+	}
+	&:active {
+		color: rgba(255, 255, 255, 0.5);
+	}
+	&:not(:last-child) {
+		margin-right: 25px;
+	}
+}

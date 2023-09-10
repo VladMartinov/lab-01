@@ -1,190 +1,254 @@
-/* Reset and base styles  */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
 html {
-	height: 100%; /* sticky footer */
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	/* sticky footer */
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	/* /sticky footer */
-
-	margin: 0;
-	font-family: sans-serif;
-	background-color: rgb(236, 246, 255);
-	color: #000000;
-}
-
-body > * {
-	flex-shrink: 0; /* sticky footer */
-}
-
-input, textarea, button {
-	font-family: inherit;
-	padding: 0;
-}
-
-label {
-	cursor: pointer;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+  font-size: 16px;
+  line-height: 1.6875;
+  margin: 0;
 }
 
 img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-fieldset {
-	border: none;
-	margin: 0;
-	padding: 0;
-}
-
-legend {
-	display: block;
-	margin: 0;
-	padding: 0;
-	border: none;
+section {
+  position: relative;
 }
 
 /* Grid styles */
 .container {
-	width: 1200px;
-	margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;
+  max-width: 1140px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* Tablet */
+  /* Mobile */
+  /* Mobile XS */
+}
+.container--fluid {
+  max-width: unset;
+}
+.container--no-padding {
+  padding: 0;
+}
+@media (max-width: 1199px) {
+  .container {
+    width: 900px;
+  }
+}
+@media (max-width: 899px) {
+  .container {
+    width: 600px;
+  }
+}
+@media (max-width: 599px) {
+  .container {
+    width: 320px;
+  }
 }
 
 /* Utility */
 .none {
-	display: none !important;
+  display: none !important;
 }
 
-/* Text */
-.title-1 {
-	font-size: 42px;
-}
-.title-2 {
-	font-size: 26px;
+.visually-hidden {
+  opacity: 0;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  display: block;
+  margin-left: -10000px;
+  background: transparent;
+  font-size: 0;
 }
 
-/* Header */
 .header {
-	padding: 15px 0;
-	background-color: rgb(30, 30, 30);
-}
-.header__wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  padding: 15px 0;
+  background-color: #1e1e1e;
 }
 
-.header__logo {
-	width: 80px;
-	height: 80px;
-}
-.header__logo img {
-	object-fit: cover;
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__nav {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
-.header__nav-item {
-	display: inline-block;
 
-	color: rgb(255, 255, 255);
-	text-decoration: none;
+.header__nav-item {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
 }
 .header__nav-item:hover {
-	color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 .header__nav-item:active {
-	color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 .header__nav-item:not(:last-child) {
-	margin-right: 25px;
+  margin-right: 25px;
 }
 
-/* Main */
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.logo img {
+  object-fit: cover;
+}
+
 .main {
-	padding: 100px 0;
+  padding: 60px 0;
 }
-
-/* Main header */
-.main-header {
-	margin-bottom: 25px;
-}
-.main-header__title {
-	margin-bottom: 15px;	
+.main section:not(:last-child) {
+  margin-bottom: 45px;
 }
 
 /* Main content nav */
-.main-content {
-	margin-bottom: 50px;
-}
-.main-content__title {
-	margin-bottom: 15px;
-}
-
 .main-content a {
-	font-size: 18px;
-	color: rgb(0, 0, 0);
-	text-decoration: none;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
 }
 .main-content a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .main-content a:active {
-	font-weight: 600;
+  font-weight: 600;
 }
+
 .main-content li:not(:last-child) {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Main History */
-.main-history {
-
+.main-history p:not(:last-child) {
+  margin-bottom: 15px;
+}
+.main-history img {
+  padding: 15px;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  float: right;
+}
+.main-history img:nth-child(even) {
+  float: left;
 }
 
-.main-history__title {
-	margin-bottom: 25px;
+/* Main Symbolism */
+.main-symbolism img {
+  padding: 15px;
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  float: right;
 }
 
-.main-history p:not(:last-child){
-	margin-bottom: 15px;
+/* Main Album */
+.main-album__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+  column-gap: 15px;
 }
 
-.main-history img{
-	padding: 15px;
-
-	width: 500px;
-	height: 500px;
-	object-fit: cover;
-
-	float: right;
+.album__list-item {
+  scale: 1;
+}
+.album__list-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.album__list-item:hover {
+  position: relative;
+  scale: 1.3;
+  transition: scale 0.3s ease-in;
+  z-index: 9;
 }
 
-/* Footer */
+/* Main Events */
+.main-events .list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-events .list-item img {
+  margin: 0 auto;
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.main-events .list-item:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.main-events .list-item__text {
+  margin-right: 40px;
+}
+.main-events .list-item__text p {
+  line-height: 1.3;
+}
+.main-events .list-item__text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* Table */
+.table {
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+.table.max-width {
+  width: 100%;
+}
+.table th {
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+  font-weight: bold;
+}
+.table td {
+  padding: 5px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+.table td:hover {
+  background-color: #bbbbbb;
+}
+.table tr.summary td {
+  background-color: #efefef;
+  font-weight: bold;
+}
+.table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+.table tbody tr:nth-child(even) {
+  background-color: #F7F7F7;
+}
+
 .footer {
-	margin-top: auto;
+  padding: 15px 0;
+  margin-top: auto;
+  background-color: #1e1e1e;
+  text-align: center;
 }
+.footer p {
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

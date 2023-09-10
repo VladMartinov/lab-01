@@ -1,0 +1,110 @@
+.main {
+	padding: 60px 0;
+
+	& section:not(:last-child) {
+		margin-bottom: 45px;
+	}
+}
+
+/* Main content nav */
+.main-content a {
+	font-size: 18px;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+	&:active {
+		font-weight: 600;
+	}
+}
+.main-content li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+/* Main History */
+.main-history {
+	& p:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	& img {
+		padding: 15px;
+		
+		width: 500px;
+		height: 500px;
+		object-fit: cover;
+		
+		float: right;
+
+		&:nth-child(even) {
+			float: left;
+		}
+	}
+}
+
+/* Main Symbolism */
+.main-symbolism img {
+	padding: 15px;
+
+	width: 500px;
+	height: 500px;
+	object-fit: contain;
+
+	float: right;
+}
+
+/* Main Album */
+.main-album__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 15px;
+	column-gap: 15px;
+}
+.album__list-item {
+	scale: 1;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&:hover {
+		position: relative;
+		scale: 1.3;
+		transition: scale 0.3s ease-in;
+		z-index: 9;
+	}
+}
+
+/* Main Events */
+.main-events .list-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	& img {
+		margin: 0 auto;
+		width: 450px;
+		height: 450px;
+		object-fit: cover;
+		border-radius: 15px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 45px;
+	}
+}
+.main-events .list-item__text {
+	margin-right: 40px;
+
+	& p {
+		line-height: 1.3;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+}
