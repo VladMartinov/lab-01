@@ -1,6 +1,9 @@
 .main {
 	padding: 60px 0;
 
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	& section:not(:last-child) {
 		margin-bottom: 45px;
 	}
