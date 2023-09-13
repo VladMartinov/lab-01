@@ -88,6 +88,7 @@
 	justify-content: space-between;
 	align-items: center;
 
+	& video,
 	& img {
 		margin: 0 auto;
 		width: 450px;
@@ -109,5 +110,44 @@
 		&:not(:last-child) {
 			margin-bottom: 15px;
 		}
+	}
+}
+
+/* Main Culture */
+
+.main-culture__block {
+	& img {
+		margin: 0 auto;
+
+		width: 500px;
+		height: 500px;
+		object-fit: cover;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 50px;
+	}
+}
+
+/* Main Feedback */
+
+.main-feedback {
+	text-align: center;
+}
+
+/* Main About */
+
+.main-about {
+	& img {
+		padding: 30px;
+
+		width: 400px;
+		height: 400px;
+
+		float: right;
+		object-fit: cover;
+
+		border-radius: 50px;
+		box-shadow: inset 0px 20px 75px -10px rgba(255, 124, 163, 0.75);
 	}
 }

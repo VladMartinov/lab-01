@@ -1,13 +1,24 @@
 html {
+	min-height: 100vh; /* sticky footer */
 	scroll-behavior: smooth;
 }
 
 body {
+	/* sticky footer */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	/* /sticky footer */
+
 	font-family: "Open Sans", sans-serif;
 	color: $black-color;
 	font-size: 16px;
 	line-height: 1.6875;
 	margin: 0;
+}
+
+body > * {
+	flex-shrink: 0; /* sticky footer */
 }
 
 img {
