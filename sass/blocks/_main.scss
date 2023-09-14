@@ -116,16 +116,61 @@
 /* Main Culture */
 
 .main-culture__block {
+
+	details {
+		border: 1px solid #aaa;
+		border-radius: 4px;
+		padding: 0.5em 0.5em 0;
+
+		text-align: center;
+
+		& + img {
+			margin-top: 25px;
+		}
+	}
+
+	summary {
+		font-weight: bold;
+		margin: -0.5em -0.5em 0;
+		padding: 0.5em;
+	}
+
+	details[open] {
+		padding: 0.5em;
+	}
+	
+	details[open] summary {
+		border-bottom: 1px solid #aaa;
+		margin-bottom: 0.5em;
+	}
+
 	& img {
 		margin: 0 auto;
 
 		width: 500px;
 		height: 500px;
 		object-fit: cover;
+
+		border-radius: 25px;
 	}
 
 	&:not(:last-child) {
 		margin-bottom: 50px;
+	}
+}
+
+.main-culture__audio {
+	li {
+		display: flex;
+		align-items: center;
+
+		span {
+			margin-right: 15px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
 	}
 }
 
