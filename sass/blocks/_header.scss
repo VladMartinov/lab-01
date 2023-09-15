@@ -17,11 +17,18 @@
 .header__nav {
 	display: flex;
 	align-items: center;
+
+	/* Mobile */
+	@media (max-width: 899px) {
+		flex-wrap: wrap;
+		justify-content: space-between;
+}
 }
 .header__nav-item {
 	display: inline-block;
-	color: rgb(255, 255, 255);
+	color: $color-white;
 	text-decoration: none;
+	text-align: center;
 
 	&:hover {
 		color: rgba(255, 255, 255, 0.8);
@@ -29,7 +36,32 @@
 	&:active {
 		color: rgba(255, 255, 255, 0.5);
 	}
+	&:first-child {
+		font-weight: 700;
+		text-shadow:
+			0 0 7px #fff,
+			0 0 10px #fff,
+			0 0 21px #fff,
+			0 0 42px #6d62ff,
+			0 0 82px #6d62ff,
+			0 0 92px #6d62ff,
+			0 0 102px #6d62ff,
+			0 0 151px #6d62ff;
+
+		@include transition($style: opacity);
+
+		&:hover {
+			opacity: 0.9;
+		}
+
+	}
 	&:not(:last-child) {
 		margin-right: 25px;
+
+		/* Mobile */
+		@media (max-width: 899px) {
+			margin-right: 0;
+		}
 	}
+
 }

@@ -1,3 +1,28 @@
-$accent-color: #f78434;
-$accent-color-hover: #ff6a00;
-$black-color: #323232;
+/* Secondary */
+$color-secondary-default: rgba(255, 124, 163, 1);
+$color-secondary-hover: rgba(255, 124, 163, 0.75);
+$color-secondary-active: #adadad;
+
+/* Border */
+$color-border-default: #dddddd;
+
+$color-border-input-default: #fff;
+$color-border-input-hover: rgb(255, 200, 60);
+$color-border-input-focus: rgb(0, 255, 255);
+$color-border-input-active: rgb(185, 210, 255);
+
+$color-border-input-valid: #00ff40;
+$color-border-input-invalid: #ff0000;
+
+/* Background */
+
+$backcolor-table-default: #dddddd;
+$backcolor-table-hover: #bbbbbb;
+$backcolor-table-disabled: #efefef;
+
+$backcolor-input-disabled: rgba(0, 0, 0, 0.25);
+
+/* Other */
+$color-form: #682d4f;
+$color-black: #323232;
+$color-white: #ffeeee;

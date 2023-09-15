@@ -3,7 +3,7 @@
 .table {
 	margin-bottom: 20px;
 
-	border: 1px solid #dddddd;
+	border: 1px solid $backcolor-table-default;
 	border-collapse: collapse;
 
 	&.max-width {
@@ -12,35 +12,35 @@
 
 	& caption {
 		font-weight: 700;
-		border: 1px solid #dddddd;
-		background-color: #efefef;
+		border: 1px solid $color-border-default;
+		background-color: $backcolor-table-disabled;
 	}
 
 	& th {
 		padding: 5px;
-		background: #efefef;
-		border: 1px solid #dddddd;
+		background-color: $backcolor-table-disabled;
+		border: 1px solid $color-border-default;
 		font-weight: bold;
 	}
 
 	& td {
 		padding: 5px;
-		border: 1px solid #dddddd;
+		border: 1px solid $color-border-default;
 		text-align: center;
 
 		&:hover {
-			background-color: #bbbbbb;
+			background-color: $backcolor-table-hover;
 		}
 	}
 
 	& tfoot td {
-		background-color: #efefef;
+		background-color: $backcolor-table-disabled;
 		font-weight: bold;
 	}
 
 	& tbody tr {
 		&:nth-child(odd) {
-			background-color: #fff;
+			background-color: #ffffff;
 		}
 
 		&:nth-child(even) {

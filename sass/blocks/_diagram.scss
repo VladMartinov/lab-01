@@ -2,7 +2,7 @@
   margin-bottom: 50px;
 
   position: relative;
-  border: 3px solid #000;
+  border: 3px solid $color-black;
   border-width: 0px 0px 3px 3px;
 
   height: 300px;
@@ -19,14 +19,25 @@
     top: 0;
     transform: translate(-50%, -75%);
 
-    border-bottom: 10px solid #000;
+    border-bottom: 10px solid $color-black;
   }
   &::after {
     right: 0px;
     bottom: 0;
     transform: translate(55%, 55%);
 
-    border-left: 10px solid #000;
+    border-left: 10px solid $color-black;
+  }
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    width: 325px;
   }
 }
 .diagram-item {

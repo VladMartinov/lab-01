@@ -53,6 +53,7 @@
 								type="text"
 								id="name"
 								name="user_name"
+								placeholder="Name"
 								required
 							/>
 						</fieldset>
@@ -64,15 +65,31 @@
 								type="email"
 								id="mailbox"
 								name="user_mailbox"
+								placeholder="Email"
 								required
 							/>
+						</fieldset>
+
+						<fieldset class="form-item">
+							<legend class="form-item__placeholder">Ваша оценка на счёт сайта</legend>
+							<select
+								class="form-item__input"
+								id="site-score"
+								name="user_site-score"
+								required>
+								<option value="5">Отличный сайт, все понравилось</option>
+								<option value="4">Хороший сайт, есть маленькие недостатки</option>
+								<option value="3">Удовлетворительный сайт, присутствуют недостатки</option>
+								<option value="2">Плохой сайт, присутствуют множество недостатков/багов</option>
+								<option value="1">Ужасный сайт, огромное количетсво багов, ужасный дизайн</option>
+						</select>
 						</fieldset>
 
 						<fieldset class="form-item">
 							<legend class="form-item__placeholder">Сообщение</legend>
 							<textarea
 								class="form-item__input"
-								id="#"
+								id="text"
 								cols="30"
 								rows="10"
 								name="user_message"
